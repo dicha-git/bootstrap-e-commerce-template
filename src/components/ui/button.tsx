@@ -15,11 +15,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Bootstrap-style variants
+        success: "bg-success text-success-foreground shadow hover:bg-success/90",
+        warning: "bg-warning text-warning-foreground shadow hover:bg-warning/90",
+        info: "bg-info text-info-foreground shadow hover:bg-info/90",
+        // Hero button for banners
+        hero: "bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 font-semibold",
+        "hero-outline": "border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-md px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
