@@ -1,57 +1,96 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Sparkles, Wand2, Search } from "lucide-react";
 
 const HeroBanner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-primary to-primary/80 overflow-hidden">
-      <div className="container-custom py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="text-primary-foreground animate-fade-in">
-            <span className="inline-block px-4 py-1 bg-primary-foreground/20 rounded-full text-sm font-medium mb-4">
-              Koleksi Terbaru 2024
+    <section className="relative bg-light from-slate-900 via-primary/90 to-slate-900 overflow-hidden min-h-[600px] flex items-center justify-center">
+      
+      {/* Background Grid Pattern (Optional for tech feel) */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 mix-blend-overlay"></div>
+      
+      <div className="container-custom px-4 relative z-10 w-full">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          
+          {/* Badge AI */}
+          <div className="animate-fade-in flex justify-center">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary border border-primary-foreground/20 backdrop-blur-md rounded-full text-sm font-medium text-primary-foreground/90">
+              <Sparkles className="w-4 h-4 text-light" />
+              Generative AI Powered by Gemini AI
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              Temukan Gaya <br />
-              <span className="text-warning">Terbaikmu</span>
-            </h1>
-            <p className="text-lg text-primary-foreground/90 mb-8 max-w-md">
-              Jelajahi koleksi produk fashion terkini dengan kualitas premium dan harga terjangkau.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero-outline" size="lg">
-                Belanja Sekarang
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="secondary" size="lg">
-                Lihat Promo
-              </Button>
-            </div>
           </div>
-          <div className="hidden md:flex justify-center items-center" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 bg-primary-foreground/10 rounded-full flex items-center justify-center">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 bg-primary-foreground/20 rounded-full flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=400&fit=crop"
-                    alt="Fashion Collection"
-                    className="w-56 h-56 lg:w-72 lg:h-72 rounded-full object-cover shadow-lg"
+
+          {/* Headlines */}
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-grey-600/50 dark:text-sky-400/50 tracking-tight">
+              Ubah Kata Menjadi <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-primary animate-shine-infinite bg-[length:200%_100%]" style={{ animationDelay: "0.4s" }}>
+                Visual Nyata
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+              Deskripsikan imajinasimu secara detail, dan biarkan AI canggih kami memvisualisasikannya dalam hitungan detik.
+            </p>
+          </div>
+
+          {/* Large AI Search/Prompt Bar */}
+          <div className="animate-fade-in w-full max-w-3xl mx-auto pt-4" style={{ animationDelay: "0.2s" }}>
+            <div className="relative group">
+              {/* Glow Effect behind input */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-warning to-primary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              
+              {/* Container Utama */}
+              <div className="relative w-full max-w-3xl mx-auto">
+                
+                {/* 1. ELEMENT SHADOW ANIMASI (Background Glow) */}
+                <div 
+                  className="absolute -inset-1 rounded-full blur-xl opacity-70 animate-shine bg-[length:200%_100%]
+                  bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"
+                ></div>
+
+                {/* 2. ELEMENT SEARCH BAR (Foreground) */}
+                <div className="relative flex items-center bg-background/90 backdrop-blur-xl border border-white/10 rounded-full p-2 shadow-2xl">
+                  
+                  
+                  <input
+                    type="text"
+                    className="flex-1 bg-transparent border-none outline-none px-4 py-4 text-lg text-foreground placeholder:text-muted-foreground/50 w-full"
+                    placeholder="Make a template with modern style..."
                   />
+                  
+                  <Button 
+                    size="lg" 
+                    className="rounded-full px-8 h-12 text-base font-semibold shadow-lg transition-all 
+                    bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 
+                    bg-[length:200%_100%] animate-shine hover:shadow-pink-500/25 text-white border-0"
+                  >
+                    Generate
+                    <Wand2 className="ml-2 w-[20px] h-[20px]" size={100} />
+                  </Button>
                 </div>
               </div>
-              {/* Floating badges */}
-              <div className="absolute top-4 right-0 bg-warning text-warning-foreground px-4 py-2 rounded-lg shadow-lg font-semibold">
-                Diskon 50%
-              </div>
-              <div className="absolute bottom-8 -left-4 bg-background text-foreground px-4 py-2 rounded-lg shadow-lg font-medium text-sm">
-                ⭐ 4.9 Rating
-              </div>
+            </div>
+
+            {/* Quick Suggestion Tags */}
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-sm text-slate-400">
+              <span>Coba:</span>
+              {["Cyberpunk City", "Lukisan Minyak", "Logo Minimalis", "Interior Modern"].map((tag, i) => (
+                <button 
+                  key={i}
+                  className="px-3 py-1 hover:text-white hover:bg-white/10 rounded-full transition-colors border border-transparent hover:border-white/10"
+                >
+                  {tag}
+                </button>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
-      {/* Decorative shapes */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+      {/* Decorative Orbs / Shapes */}
+      <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-warning/10 rounded-full blur-[120px] -z-10" />
+      
     </section>
   );
 };

@@ -97,11 +97,22 @@ export default {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "shine": {
+          from: { backgroundPosition: "200% center" },
+          to: { backgroundPosition: "-200% center" },
+        },
+        "shine-infinite": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" }, // Mentok Kanan
+          "100%": { backgroundPosition: "0% 50%" },  // Balik ke Kiri
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out forwards",
+        "shine": "shine 3s linear infinite",
+        "shine-infinite": "shine-infinite 3s linear infinite",
       },
     },
   },

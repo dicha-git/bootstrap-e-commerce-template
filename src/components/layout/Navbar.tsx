@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm">
       {/* Top bar */}
-      <div className="bg-primary text-primary-foreground py-2 text-sm">
+      <div className="bg-gradient-to-r from-primary to-purple-500 text-primary-foreground py-2 text-sm">
         <div className="container-custom flex justify-between items-center">
           <span>Gratis Ongkir untuk pembelian di atas Rp 500.000</span>
           <div className="hidden md:flex items-center gap-4">
